@@ -20,78 +20,63 @@ test('police', () => {
     expect(isPhoneNumber(6192235467)).toBe(true);
   });
 
-  test('bad format number ', () => {
-    expect(sum(1,2)).toBe(false);
+  test('only @ ', () => {
+    expect(isEmail(@@@@@@).toBe(false);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(false);
+test('only letter', () => {
+    expect(isEmail(kioasfoije).toBe(false);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+test('hotmail', () => {
+    expect(isEmail(ants@hotmail.com).toBe(true);
   });
 
-  test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+  test('gmail', () => {
+    expect(isEmail(applesauce@gmail.com).toBe(true);
   });
-  test('bad format number ', () => {
-    expect(sum(1,2)).toBe(false);
-  });
-
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(false);
+  test('only letter', () => {
+    expect(isStrongPassword(qwerty).toBe(false);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+test('abc', () => {
+    expect(isStrongPassword(abc)).toBe(false);
   });
 
-  test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
-  });
-  test('bad format number ', () => {
-    expect(sum(1,2)).toBe(false);
+test('strong pass', () => {
+    expect(isStrongPassword(fnjkfd@#@#@#@#2jjfkeFNFNJ)).toBe(true);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(false);
+  test('strong pass 2', () => {
+    expect(isStrongPassword(djwokjfo3DJWKND2132192@@#32)).toBe(true);
+  });
+  test('repeat', () => {
+    expect(isDate(1111/1111/1111)).toBe(false);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+test('letters', () => {
+    expect(isDate(dkm)).toBe(false);
   });
 
-  test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
-  });
-  test('bad format number ', () => {
-    expect(sum(1,2)).toBe(false);
+test('good date, () => {
+    expect(isDate(11/11/2011)).toBe(true);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(false);
+  test('birthday', () => {
+    expect(isDate(01/02/2003)).toBe(true);
+  });
+  test('only number', () => {
+    expect(isHexColor(1113321)).toBe(false);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+test('special char, () => {
+    expect(isHexColor(najf!)).toBe(false);
   });
 
-  test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
-  });
-  test('bad format number ', () => {
-    expect(sum(1,2)).toBe(false);
+test('good color', () => {
+    expect(isHexColor(FD123)).toBe(true);
   });
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(false);
-  });
-
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
-  });
-
-  test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(true);
+  test('good color 1', () => {
+    expect(isHexColor(FFFFF)).toBe(true);
   });
